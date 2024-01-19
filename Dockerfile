@@ -1,7 +1,7 @@
 FROM archlinux:latest
 RUN pacman -Syu --noconfirm && pacman -S base-devel go pam libx11 --noconfirm
-COPY . ./
 RUN useradd -m -U sysuser
+COPY . ./
 #RUN make && make install-all
 USER sysuser
 WORKDIR app/
