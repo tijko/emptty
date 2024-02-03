@@ -3,15 +3,15 @@ name: manual
 on: workflow_dispatch
 
 jobs:
-  manual-test-arch:
-    name: Manual-Test-Arch
-    runs-on: ubuntu-latest
+    manual-test-arch:
+        name: Manual-Test-Arch
+        runs-on: ubuntu-latest
 
     container:
-      image: 'archlinux:base'
+        image: 'archlinux:base'
         
     steps:
-      - name: Prepare Container
-        run: |
-          pacman -Syu --nonconfirm
-          pacman -S --noconfirm git make go gcc pam libx11
+        - name: Prepare Container
+          run: |
+            pacman -Syu --nonconfirm
+            pacman -S --noconfirm git make go gcc pam libx11
